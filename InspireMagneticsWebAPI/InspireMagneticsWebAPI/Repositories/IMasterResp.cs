@@ -5107,7 +5107,7 @@ namespace InspireMagneticsWebAPI.Repositories
         public async Task<DataSet> SaveAndUpdateSupplierItemDetailsDemoTest(ODBCHelper _objODBCHelper, SupplierItems _objSupplierItems)
         {
             DataSet finalDataSet = new DataSet();
-            string TableName = "SUPPLIER_ITEM_RESPONSE";
+            string TableName = "SUPPLIER_ITEM_RESPONSE1";
             try
             {
                 finalDataSet = await _objODBCHelper.ExecuteXMLStoredProcedure(_objSupplierItems, Helper.XML_PARAMS, StoredProcedure.SUPPLIER_ITEMS);
