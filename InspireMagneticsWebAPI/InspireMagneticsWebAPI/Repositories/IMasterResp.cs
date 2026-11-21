@@ -5099,7 +5099,7 @@ namespace InspireMagneticsWebAPI.Repositories
         }
 
         /// <summary>
-        /// This Method Is Used To Save and Update Delivery Note Details.
+        /// This Method Is Used To Save and Update Delivery Note Details Demo Test.
         /// </summary>
         /// <param name="_objODBCHelper"></param>
         /// <param name="_objSupplierItems"></param>
@@ -5115,7 +5115,7 @@ namespace InspireMagneticsWebAPI.Repositories
             }
             catch (Exception ex)
             {
-                Helper.LogMessage(CommonHelper.KeyOption.APIErrorLog, LogNameSpaceConstants.RepositoriesLogNamespace, $"{IMasterRespLogClassName}.SaveAndUpdateSupplierItemDetails()", ex.Message, false);
+                Helper.LogMessage(CommonHelper.KeyOption.APIErrorLog, LogNameSpaceConstants.RepositoriesLogNamespace, $"{IMasterRespLogClassName}.SaveAndUpdateSupplierItemDetailsDemoTest()", ex.Message, false);
                 throw;
             }
             return finalDataSet;
