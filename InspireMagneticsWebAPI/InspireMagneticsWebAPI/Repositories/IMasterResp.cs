@@ -5099,6 +5099,30 @@ namespace InspireMagneticsWebAPI.Repositories
         }
 
         /// <summary>
+        /// This Method Is Used To Save and Update Delivery Note Details Demo Test.
+        /// </summary>
+        /// <param name="_objODBCHelper"></param>
+        /// <param name="_objSupplierItems"></param>
+        /// <returns></returns>
+        public async Task<DataSet> SaveAndUpdateSupplierItemDetailsDemoTest(ODBCHelper _objODBCHelper, SupplierItems _objSupplierItems)
+        {
+            DataSet finalDataSet = new DataSet();
+            string TableName = "SUPPLIER_ITEM_RESPONSE";
+            try
+            {
+                finalDataSet = await _objODBCHelper.ExecuteXMLStoredProcedure(_objSupplierItems, Helper.XML_PARAMS, StoredProcedure.SUPPLIER_ITEMS);
+                finalDataSet = Helper.CheckAndValidateDatasetTable(finalDataSet, TableName);
+            }
+            catch (Exception ex)
+            {
+                Helper.LogMessage(CommonHelper.KeyOption.APIErrorLog, LogNameSpaceConstants.RepositoriesLogNamespace, $"{IMasterRespLogClassName}.SaveAndUpdateSupplierItemDetailsDemoTest()", ex.Message, false);
+                throw;
+            }
+            return finalDataSet;
+
+        }
+
+        /// <summary>
         /// This Method Is Used to Get Supplier Item Details.
         /// </summary>
         /// <param name="_objODBCHelper"></param>
