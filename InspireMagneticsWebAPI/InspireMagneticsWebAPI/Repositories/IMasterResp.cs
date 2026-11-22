@@ -5147,6 +5147,25 @@ namespace InspireMagneticsWebAPI.Repositories
             return finalDataSet;
         }
 
+        public async Task<DataSet> GetSupplierItemDetailsTest(ODBCHelper _objODBCHelper, SupplierItemsDetailsRequestParam _objSupplierItemsDetailsRequestParam)
+        {
+            DataSet finalDataSet = new DataSet();
+            string TableName = "SUPPLIER_ITEM_DETAIL_RESPONSEtesting";
+            try
+            {
+                SupplierItems _objSupplierItems = Helper.ToCopyClassProperties<SupplierItemsDetailsRequestParam, SupplierItems>(_objSupplierItemsDetailsRequestParam);
+                _objSupplierItems.ParamType = "GetSupplierItemDetails";
+                finalDataSet = await _objODBCHelper.ExecuteXMLStoredProcedure(_objSupplierItems, Helper.XML_PARAMS, StoredProcedure.SUPPLIER_ITEMS);
+                finalDataSet = Helper.CheckAndValidateDatasetTable(finalDataSet, TableName);
+            }
+            catch (Exception ex)
+            {
+                Helper.LogMessage(CommonHelper.KeyOption.APIErrorLog, LogNameSpaceConstants.RepositoriesLogNamespace, $"{IMasterRespLogClassName}.GetSupplierItemDetails()", ex.Message, false);
+                throw;
+            }
+            return finalDataSet;
+        }
+
         /// <summary>
         /// This Method Is Used to Get Supplier Item List.
         /// </summary>
