@@ -167,6 +167,11 @@ namespace InspireMagneticsWebAPI.Models
     {
         
     }
+    public class SupplierDemoItemsDetailsRequestParam : CommonDemoSupplierItemsDetailsRequestParam
+    {
+
+    }
+
 
     public class SupplierItemsSearchListRequestParam : CommonPaginationListRequestParam
     {
@@ -190,6 +195,16 @@ namespace InspireMagneticsWebAPI.Models
     }
 
     public class CommonSupplierItemsDetailsRequestParam
+    {
+        /// <summary>
+        /// Supplier Item ID
+        /// </summary>
+        [Display(Name = "Supplier Item ID")]
+        [Required(ErrorMessage = "Enter The Supplier Item ID.")]
+        public int SupplierItemID { get; set; }
+    }
+
+    public class CommonDemoSupplierItemsDetailsRequestParam
     {
         /// <summary>
         /// Supplier Item ID
