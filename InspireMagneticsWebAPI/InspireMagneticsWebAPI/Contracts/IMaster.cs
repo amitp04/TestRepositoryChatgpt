@@ -936,6 +936,14 @@ namespace InspireMagneticsWebAPI.Contracts
         Task<DataSet> GetSupplierItemDetails(ODBCHelper _objODBCHelper, SupplierItemsDetailsRequestParam _objSupplierItemsDetailsRequestParam);
 
         /// <summary>
+        /// Add Test Method
+        /// </summary>
+        /// <param name="_objODBCHelper"></param>
+        /// <param name="_objSupplierItemsDetailsRequestParam"></param>
+        /// <returns></returns>
+        Task<DataSet> GetSupplierItemDetailsTestMethod(ODBCHelper _objODBCHelper, SupplierItemsDetailsRequestParam _objSupplierItemsDetailsRequestParam);
+
+        /// <summary>
         /// This Method Is Used to Get Supplier Item List.
         /// </summary>
         /// <param name="_objODBCHelper"></param>
