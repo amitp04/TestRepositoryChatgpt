@@ -210,7 +210,7 @@ namespace InspireMagneticsWebAPI.Models
         /// Supplier Item ID
         /// </summary>
         [Display(Name = "Supplier Item ID")]
-        [Required(ErrorMessage = "Enter The Supplier Item ID..")]
+        [Required(ErrorMessage = "Enter The Supplier Item ID.")]
         public int SupplierItemID { get; set; }
     }
 }
