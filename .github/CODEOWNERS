@@ -1,0 +1,5 @@
+# Default code owners for all files
+* @amitp04 @UdRao
+
+# Protect the CODEOWNERS file
+/.github/CODEOWNERS @amitp04 @UdRao
